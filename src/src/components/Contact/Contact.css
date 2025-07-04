@@ -1,0 +1,145 @@
+
+.contact {
+  background: linear-gradient(135deg, #fdfdfd, #e0f7fa);
+  padding: 100px 6% 80px;  
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  scroll-margin-top: 100px; 
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #203864;
+  margin-bottom: 0.5rem;
+}
+
+.contact-title span {
+  color: #e1306c;
+}
+
+.contact-sub {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 50px;
+}
+
+
+.insta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: #ffffffcc;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 2;
+}
+
+.insta-icon i {
+  font-size: 4.5rem;
+  color: #e1306c;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.brand-name {
+  font-size: 2rem;
+  color: #203864;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.brand-tag {
+  font-size: 1.2rem;
+  color: #009688;
+  margin: 8px 0;
+}
+
+.brand-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+.insta-follow {
+  background: #e1306c;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.insta-follow:hover {
+  background: #c1275a;
+  transform: scale(1.05);
+}
+
+.emoji-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.emoji-bg .emoji {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.2;
+  animation: floatEmoji 6s ease-in-out infinite;
+}
+
+.emoji:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.emoji:nth-child(2) { top: 60%; left: 80%; animation-delay: 1s; }
+.emoji:nth-child(3) { top: 75%; left: 20%; animation-delay: 2s; }
+.emoji:nth-child(4) { top: 30%; right: 15%; animation-delay: 3s; }
+.emoji:nth-child(5) { bottom: 10%; left: 50%; animation-delay: 4s; }
+
+@keyframes floatEmoji {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 80px 20px 60px;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .insta-block {
+    padding: 30px 20px;
+  }
+
+  .brand-name {
+    font-size: 1.6rem;
+  }
+
+  .insta-icon i {
+    font-size: 3.5rem;
+  }
+
+  .brand-tag,
+  .brand-desc {
+    font-size: 0.95rem;
+  }
+}
